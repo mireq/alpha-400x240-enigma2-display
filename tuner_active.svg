@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="104" height="21" version="1.1" viewBox="0 0 104 21" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <filter id="filter105" color-interpolation-filters="sRGB">
+   <feFlood flood-color="rgb(0,0,0)" flood-opacity=".31373" result="flood"/>
+   <feComposite in="flood" in2="SourceGraphic" operator="in" result="composite1"/>
+   <feGaussianBlur in="composite1" result="blur" stdDeviation="0.5"/>
+   <feOffset dx="0" dy="-1" result="offset"/>
+   <feComposite in="SourceGraphic" in2="offset" result="composite2"/>
+  </filter>
+ </defs>
+ <g id="image">
+  <g stroke-linecap="round" stroke-opacity=".50896">
+   <rect x="13" width="13" height="21" fill="#9c27b0"/>
+   <rect x="26" width="13" height="21" fill="#3f51b5"/>
+   <rect x="39" width="13" height="21" fill="#03a9f4"/>
+   <rect x="65" width="13" height="21" fill="#4caf50"/>
+   <rect x="78" width="13" height="21" fill="#ffc107"/>
+   <rect x="52" width="13" height="21" fill="#009688"/>
+  </g>
+  <path d="m5 0c-2.77 0-5 2.23-5 5v11c0 2.77 2.23 5 5 5h8v-21z" fill="#f44336"/>
+  <path d="m90.996 0v21h8.0039c2.7436 0 4.9541-2.1887 4.9961-4.9219v-11.156c-0.042-2.7332-2.2525-4.9219-4.9961-4.9219h-8.0039z" fill="#ff5722"/>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(-16.796 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">A</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(-3.7962 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">B</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(9.2042 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">C</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(22.205 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">D</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(35.205 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">E</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(48.206 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">F</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(61.206 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">G</tspan></text>
+  <text style="fill:#ffffff; font-family:Ubuntu; font-size:16px; font-weight:bold; line-height:125%; text-anchor:middle" transform="translate(74.206 -2.4613)" x="23.421211" y="18.313173" dominant-baseline="auto" filter="url(#filter105)" stop-color="#000000" text-align="center" xml:space="preserve"><tspan x="23.421211" y="18.313173">H</tspan></text>
+ </g>
+</svg>

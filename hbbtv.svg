@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66" height="21" version="1.1" viewBox="0 0 66 21" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient id="radialGradient989" cx="13" cy="4" r="9" gradientTransform="matrix(-2.1081e-5 1.9243 -2.3495 0 20.419 -23.024)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f00" offset="0"/>
+   <stop stop-color="#da0000" offset="1"/>
+  </radialGradient>
+ </defs>
+ <rect x="-7.5412e-10" width="66" height="21" rx="11.5" ry="11.5" fill="#fff" fill-opacity=".75"/>
+ <text transform="translate(3.8217 -2.2921)" x="17.205212" y="18.313173" dominant-baseline="auto" fill="#000000" font-family="'Ubuntu Condensed'" font-size="16px" font-weight="bold" letter-spacing="0px" stop-color="#000000" stroke-width="1px" word-spacing="0px" style="font-feature-settings:normal;font-variant-alternates:normal;font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal;font-variant-position:normal;inline-size:0;line-height:125%;shape-margin:0;shape-padding:0;text-decoration-color:#000000;text-decoration-line:none;text-decoration-style:solid;text-indent:0;text-orientation:mixed;text-transform:none;white-space:normal" xml:space="preserve"><tspan x="17.205212" y="18.313173">HBBTV</tspan></text>
+ <circle cx="10.5" cy="10.5" r="9" fill="url(#radialGradient989)"/>
+</svg>
