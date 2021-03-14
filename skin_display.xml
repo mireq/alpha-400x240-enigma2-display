@@ -232,32 +232,83 @@
 	</screen>
 
 	<screen name="TunerInfoPanel">
-		<widget source="session.TunerInfo" render="Pixmap" position="5,214" size="13,21" alphatest="blend" pixmap="tuner_1_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">1,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="18,214" size="13,21" alphatest="blend" pixmap="tuner_2_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">2,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="31,214" size="13,21" alphatest="blend" pixmap="tuner_3_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">3,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="44,214" size="13,21" alphatest="blend" pixmap="tuner_4_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">4,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="57,214" size="13,21" alphatest="blend" pixmap="tuner_5_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">5,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="70,214" size="13,21" alphatest="blend" pixmap="tuner_6_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">6,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="83,214" size="13,21" alphatest="blend" pixmap="tuner_7_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">7,100</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="96,214" size="13,21" alphatest="blend" pixmap="tuner_8_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">8,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="10,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_1_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">1,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="24,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_2_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">2,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="38,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_3_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">3,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="52,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_4_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">4,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="66,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_5_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">5,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="80,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_6_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">6,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="94,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_7_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">7,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="108,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_8_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">8,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="10,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_9_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">9,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="24,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_10_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">10,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="38,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_11_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">11,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="52,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_12_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">12,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="66,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_13_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">13,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="80,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_14_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">14,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="94,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_15_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">15,100</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="108,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_16_off.png"><convert type="TunerInfo">TunerAvailable</convert><convert type="ValueRange">16,100</convert><convert type="ConditionalShowHide" /></widget>
 
-		<widget source="session.TunerInfo" render="Pixmap" position="5,214" size="13,21" alphatest="blend" pixmap="tuner_1_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">1</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="18,214" size="13,21" alphatest="blend" pixmap="tuner_2_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">2</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="31,214" size="13,21" alphatest="blend" pixmap="tuner_3_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">4</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="44,214" size="13,21" alphatest="blend" pixmap="tuner_4_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">8</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="57,214" size="13,21" alphatest="blend" pixmap="tuner_5_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">16</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="70,214" size="13,21" alphatest="blend" pixmap="tuner_6_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">32</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="83,214" size="13,21" alphatest="blend" pixmap="tuner_7_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">64</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="96,214" size="13,21" alphatest="blend" pixmap="tuner_8_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">128</convert><convert type="ConditionalShowHide" /></widget>
 
-		<widget source="session.FrontendInfo" render="Pixmap" position="5,214" size="13,21" alphatest="blend" pixmap="tuner_1_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">0,0</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="18,214" size="13,21" alphatest="blend" pixmap="tuner_2_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">1,1</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="31,214" size="13,21" alphatest="blend" pixmap="tuner_3_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">2,2</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="44,214" size="13,21" alphatest="blend" pixmap="tuner_4_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">3,3</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="57,214" size="13,21" alphatest="blend" pixmap="tuner_5_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">4,4</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="70,214" size="13,21" alphatest="blend" pixmap="tuner_6_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">5,5</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="83,214" size="13,21" alphatest="blend" pixmap="tuner_7_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">6,6</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="96,214" size="13,21" alphatest="blend" pixmap="tuner_8_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">7,7</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="10,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_1_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">1</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="24,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_2_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">2</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="38,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_3_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">4</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="52,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_4_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">8</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="66,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_5_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">16</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="80,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_6_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">32</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="94,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_7_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">64</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="108,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_8_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">128</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="10,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_9_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">256</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="24,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_10_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">512</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="38,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_11_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">1024</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="52,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_12_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">2048</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="66,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_13_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">4096</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="80,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_14_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">8192</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="94,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_15_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">16384</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="108,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_16_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">32768</convert><convert type="ConditionalShowHide" /></widget>
+
+
+		<widget source="session.FrontendInfo" render="Pixmap" position="10,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_1_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">0,0</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="24,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_2_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">1,1</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="38,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_3_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">2,2</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="52,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_4_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">3,3</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="66,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_5_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">4,4</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="80,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_6_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">5,5</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="94,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_7_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">6,6</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="108,206" size="14,15" alphatest="blend" pixmap="tuner/tuner_8_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">7,7</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="10,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_9_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">8,8</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="24,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_10_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">9,9</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="38,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_11_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">10,10</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="52,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_12_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">11,11</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="66,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_13_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">12,12</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="80,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_14_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">13,13</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="94,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_15_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">14,14</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.FrontendInfo" render="Pixmap" position="108,221" size="14,15" alphatest="blend" pixmap="tuner/tuner_16_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">15,15</convert><convert type="ConditionalShowHide" /></widget>
+
+		<applet type="onLayoutFinish">
+<![CDATA[
+import traceback
+
+def find_first_tuner(renderer):
+	return next((widget for widget in enumerate(renderer) if widget[1].position == (10, 206)), None)
+
+try:
+	from Components.NimManager import nimmanager
+	from enigma import ePoint
+
+	tuner_count = len(nimmanager.nim_slots)
+
+	index, tuner_widget = find_first_tuner(self.renderer)
+	tuner_widget_count = 16
+	if tuner_count < 9:
+		for i in range(tuner_widget_count * 3):
+			tuner_widget = self.renderer[index + i]
+			tuner_widget.move(ePoint(tuner_widget.position[0], tuner_widget.position[1] + 9))
+except Exception:
+	traceback.print_exc()
+
+]]>
+		</applet>
 	</screen>
 
 	<screen name="VideoInfoPanel">
@@ -267,29 +318,66 @@
 	</screen>
 
 	<screen name="StandbyTunerInfoPanel">
-		<widget source="session.TunerInfo" render="Pixmap" position="5,4" pixmap="tuner_off.png" size="104,21" alphatest="blend">
-			<convert type="TunerInfo">TunerUseMask</convert>
-			<convert type="ValueBitTest">65535</convert>
-			<convert type="ConditionalShowHide" />
-		</widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="5,4" pixmap="tuner/tuner_1_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="19,4" pixmap="tuner/tuner_2_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="33,4" pixmap="tuner/tuner_3_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="47,4" pixmap="tuner/tuner_4_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="61,4" pixmap="tuner/tuner_5_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="75,4" pixmap="tuner/tuner_6_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="89,4" pixmap="tuner/tuner_7_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="103,4" pixmap="tuner/tuner_8_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="5,19" pixmap="tuner/tuner_9_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="19,19" pixmap="tuner/tuner_10_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="33,19" pixmap="tuner/tuner_11_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="47,19" pixmap="tuner/tuner_12_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="61,19" pixmap="tuner/tuner_13_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="75,19" pixmap="tuner/tuner_14_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="89,19" pixmap="tuner/tuner_15_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="103,19" pixmap="tuner/tuner_16_off.png" size="14,15" alphatest="blend"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">65535</convert><convert type="ConditionalShowHide" /></widget>
 
-		<widget source="session.TunerInfo" render="Pixmap" position="5,4" size="13,21" alphatest="blend" pixmap="tuner_1_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">1</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="18,4" size="13,21" alphatest="blend" pixmap="tuner_2_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">2</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="31,4" size="13,21" alphatest="blend" pixmap="tuner_3_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">4</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="44,4" size="13,21" alphatest="blend" pixmap="tuner_4_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">8</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="57,4" size="13,21" alphatest="blend" pixmap="tuner_5_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">16</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="70,4" size="13,21" alphatest="blend" pixmap="tuner_6_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">32</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="83,4" size="13,21" alphatest="blend" pixmap="tuner_7_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">64</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.TunerInfo" render="Pixmap" position="96,4" size="13,21" alphatest="blend" pixmap="tuner_8_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">128</convert><convert type="ConditionalShowHide" /></widget>
 
-		<widget source="session.FrontendInfo" render="Pixmap" position="5,4" size="13,21" alphatest="blend" pixmap="tuner_1_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">0,0</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="18,4" size="13,21" alphatest="blend" pixmap="tuner_2_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">1,1</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="31,4" size="13,21" alphatest="blend" pixmap="tuner_3_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">2,2</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="44,4" size="13,21" alphatest="blend" pixmap="tuner_4_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">3,3</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="57,4" size="13,21" alphatest="blend" pixmap="tuner_5_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">4,4</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="70,4" size="13,21" alphatest="blend" pixmap="tuner_6_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">5,5</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="83,4" size="13,21" alphatest="blend" pixmap="tuner_7_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">6,6</convert><convert type="ConditionalShowHide" /></widget>
-		<widget source="session.FrontendInfo" render="Pixmap" position="96,4" size="13,21" alphatest="blend" pixmap="tuner_8_active.png"><convert type="FrontendInfo">NUMBER</convert><convert type="ValueRange">7,7</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="5,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_1_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">1</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="19,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_2_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">2</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="33,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_3_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">4</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="47,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_4_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">8</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="61,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_5_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">16</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="75,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_6_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">32</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="89,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_7_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">64</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="103,4" size="14,15" alphatest="blend" pixmap="tuner/tuner_8_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">128</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="5,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_9_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">256</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="19,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_10_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">512</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="33,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_11_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">1024</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="47,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_12_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">2048</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="61,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_13_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">4096</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="75,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_14_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">8192</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="89,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_15_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">16384</convert><convert type="ConditionalShowHide" /></widget>
+		<widget source="session.TunerInfo" render="Pixmap" position="103,19" size="14,15" alphatest="blend" pixmap="tuner/tuner_16_on.png"><convert type="TunerInfo">TunerUseMask</convert><convert type="ValueBitTest">32768</convert><convert type="ConditionalShowHide" /></widget>
+
+		<applet type="onLayoutFinish">
+<![CDATA[
+import traceback
+
+def find_first_tuner(renderer):
+	return next((widget for widget in enumerate(renderer) if widget[1].position == (5, 4)), None)
+
+try:
+	from Components.NimManager import nimmanager
+	from enigma import eSize
+
+	tuner_count = len(nimmanager.nim_slots)
+
+	index, tuner_widget = find_first_tuner(self.renderer)
+	tuner_widget_count = 16
+	for i in range(tuner_count, tuner_widget_count):
+		tuner_widget = self.renderer[index + i]
+		tuner_widget.resize(eSize(0, 0))
+		tuner_widget = self.renderer[index + i + tuner_widget_count]
+		tuner_widget.resize(eSize(0, 0))
+except Exception:
+	traceback.print_exc()
+
+]]>
+		</applet>
 	</screen>
 
 	<screen name="LargeClockPanel">
