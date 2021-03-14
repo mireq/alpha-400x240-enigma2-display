@@ -485,40 +485,42 @@ def find_tag(renderer):
 	return next((widget for widget in enumerate(renderer) if hasattr(widget[1].source, 'text') and widget[1].source.text == 'TagTitle'), None)
 
 
-def ev_update_info(self, event_name, tag_title):
+def ev_update_info(self, event_name_widget, tag_title_widget, event):
 	from enigma import iServiceInformation
 
 	def update():
 		title_text = ''
-		current_play = self.session.nav.getCurrentService()
-		if current_play:
-			info = current_play.info()
-			title_text = info.getInfoString(iServiceInformation.sTagTitle)
+		if event == 'update':
+			current_play = self.session.nav.getCurrentService()
+			if current_play:
+				info = current_play.info()
+				title_text = info.getInfoString(iServiceInformation.sTagTitle)
 		if title_text:
-			tag_title.show()
-			event_name.hide()
-			if tag_title.source.text != title_text:
-				tag_title.source.text = title_text
-				tag_title.moveLabel(0, 0)
+			event_name_widget.hide()
 		else:
-			tag_title.hide()
-			event_name.show()
+			event_name_widget.show()
+		if tag_title_widget.source.text != title_text:
+			tag_title_widget.source.text = title_text
+			tag_title_widget.changed((tag_title_widget.CHANGED_DEFAULT,))
 	return update
 
+
 try:
-	index, tag_title = find_tag(self.renderer)
-	event_name = self.renderer[index-1]
-	tag_title.source.text = ''
-	tag_title.hide()
-	tag_title.resize(event_name.instance.size())
-	tag_title.move(event_name.instance.position())
-	update_callback = ev_update_info(self, event_name, tag_title)
+	index, tag_title_widget = find_tag(self.renderer)
+	event_name_widget = self.renderer[index-1]
+	tag_title_widget.source.text = ''
+	tag_title_widget.changed((tag_title_widget.CHANGED_DEFAULT,))
+	tag_title_widget.resize(event_name_widget.instance.size())
+	tag_title_widget.move(event_name_widget.instance.position())
+
+	update_callback = ev_update_info(self, event_name_widget, tag_title_widget, 'update')
+	clear_callback = ev_update_info(self, event_name_widget, tag_title_widget, 'clear')
 	update_callback()
+
 	ServiceEventTracker(screen=self, eventmap={
 		iPlayableService.evStart: update_callback,
-		iPlayableService.evTunedIn: update_callback,
+		iPlayableService.evEnd: clear_callback,
 		iPlayableService.evUpdatedInfo: update_callback,
-		iPlayableService.evNewProgramInfo: update_callback,
 	})
 except Exception:
 	traceback.print_exc()
