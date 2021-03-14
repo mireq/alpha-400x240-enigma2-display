@@ -28,6 +28,9 @@
 		<color name="SignalProgressBackgroundColor" value="#182755" />
 		<color name="SignalProgressForegroundColor" value="#448aff" />
 		<color name="MenuBarColor" value="#273471" />
+		<color name="ChannelSelectionBarColor" value="#1b5e20" />
+		<color name="MovieBarColor" value="#1b5e20" />
+		<color name="ButtonColor" value="#1565c0" />
 	</colors>
 
 	<fonts>
@@ -38,14 +41,14 @@
 
 <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SCREENS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 
-	<screen name="StandbySummary" position="0,0" size="400,240">
+	<screen name="StandbySummary" position="fill">
 		<panel name="LargeClockPanel" />
 		<panel name="StandbyRecordingPanel" />
 		<panel name="WeatherPanel" />
 		<panel name="StandbyTunerInfoPanel" />
 	</screen>
 
-	<screen name="InfoBarSummary" position="0,0" size="400,240">
+	<screen name="InfoBarSummary" position="fill">
 		<panel name="PiconMainPanel" />
 		<panel name="ProgressInfoPanel" />
 		<panel name="SummaryClockPanel" />
@@ -58,7 +61,7 @@
 		<panel name="VideoInfoPanel" />
 	</screen>
 
-	<screen name="EMCMoviePlayerSummary" position="0,0" size="400,240">
+	<screen name="EMCMoviePlayerSummary" position="fill">
 		<ePixmap pixmap="backdrop_movie.png" position="0,0" size="400,190" zPosition="-1" alphatest="blend" />
 		<panel name="EMCMoviePlayerInfoPanel" />
 		<panel name="EMCProgressInfoPanel" />
@@ -66,11 +69,11 @@
 		<panel name="RecordingPanel" />
 	</screen>
 
-	<screen name="EMCSelectionSummary" position="0,0" size="400,240">
+	<screen name="EMCSelectionSummary" position="fill">
 		<ePixmap pixmap="backdrop_movie.png" position="0,35" size="400,190" zPosition="-1" alphatest="blend" />
-		<eLabel position="0,0" size="400,50" backgroundColor="#a74b00" />
-		<widget source="parent.spacefree" render="Label" position="230,0" size="160,50" font="Ubuntu-Condensed;20" halign="right" valign="center" zPosition="1" transparent="1" backgroundColor="#a74b00" foregroundColor="TextColor" />
-		<widget source="session.FrontendInfo" render="FixedLabel" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" text="EMC" foregroundColor="TextColor" />
+		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
+		<widget source="parent.spacefree" render="Label" position="230,0" size="160,50" font="Ubuntu-Condensed;20" halign="right" valign="center" zPosition="1" transparent="1" backgroundColor="MovieBarColor" foregroundColor="TextColor" />
+		<widget source="session.FrontendInfo" render="FixedLabel" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" text="EMC" foregroundColor="TextColor" backgroundColor="#000000" />
 		<widget source="parent.Service" render="Label" position="center,50" size="390,140" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -86,10 +89,24 @@
 			<convert type="EMCServiceTime">StartTime</convert>
 			<convert type="EMCClockToText">Format:%d. %m. %Y %H:%M</convert>
 		</widget>
-
 	</screen>
 
-	<screen name="MenuSummary" position="0,0" size="400,240">
+	<screen name="MovieSelectionSummary" position="fill">
+		<ePixmap pixmap="backdrop_movie.png" position="0,35" size="400,190" zPosition="-1" alphatest="blend" />
+		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" zPosition="1" transparent="1" foregroundColor="TextColor" />
+		<widget source="name" render="Label" position="center,55" size="360,180" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1" foregroundColor="TextColor" />
+	</screen>
+
+	<screen name="InfoBarMoviePlayerSummary" position="fill">
+		<ePixmap pixmap="backdrop_movie.png" position="0,0" size="400,190" zPosition="-1" alphatest="blend" />
+		<panel name="MoviePlayerInfoPanel" />
+		<panel name="MovieProgressInfoPanel" />
+		<panel name="SummaryClockPanel" />
+		<panel name="RecordingPanel" />
+	</screen>
+
+	<screen name="MenuSummary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
 		<widget source="parent.title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
 		<widget source="parent.menu" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1">
@@ -97,7 +114,7 @@
 		</widget>
 	</screen>
 
-	<screen name="SimpleSummary" position="0,0" size="400,240">
+	<screen name="SimpleSummary" position="fill">
 		<widget source="parent.Title" render="Label" position="center,25" size="390,150" font="Ubuntu-Bold;46" halign="center" valign="center" transparent="1">
 		</widget>
 		
@@ -105,9 +122,9 @@
 		<panel name="SummaryClockPanel" />
 	</screen>
 
-	<screen name="ChannelSelection_summary" position="0,0" size="400,240">
-		<eLabel position="0,0" size="400,50" backgroundColor="#1b5e20" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
+	<screen name="ChannelSelection_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="ChannelSelectionBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="parent.ServiceEvent" render="Label" position="center,50" size="390,148" font="Ubuntu-Bold;46" halign="center" valign="center" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -121,11 +138,11 @@
 		</widget>
 	</screen>
 
-	<screen name="ChannelSelectionRadio_summary" position="0,0" size="400,240">
+	<screen name="ChannelSelectionRadio_summary" position="fill">
 		<panel name="ChannelSelection_summary" />
 	</screen>
 
-	<screen name="HbbTVWindow_summary" position="0,0" size="400,240">
+	<screen name="HbbTVWindow_summary" position="fill">
 		<panel name="PiconMainPanel" />
 		<panel name="RecordingPanel" />
 		<ePixmap pixmap="hbbtv_active.png" position="5,5" size="122,42" zPosition="-1" alphatest="blend"  />
@@ -133,28 +150,28 @@
 		</widget>
 	</screen>
 
-	<screen name="MessageBoxSimple_summary" position="0,0" size="400,240">
+	<screen name="MessageBoxSimple_summary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
 		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
 		<widget source="parent.Text" render="Label" position="center,55" size="390,120" font="Ubuntu-Condensed;30" halign="center" valign="center" />
-		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="0" backgroundColor="#1565c0" zPosition="1" />
+		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="0" backgroundColor="ButtonColor" zPosition="1" />
 	</screen>
 
-	<screen name="MessageBox_summary" position="0,0" size="400,240">
+	<screen name="MessageBox_summary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
 		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
 		<widget source="parent.Text" render="Label" position="center,55" size="390,120" font="Ubuntu-Condensed;26" halign="center" valign="center" />
 		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="1" />
 	</screen>
 
-	<screen name="NumberZap_summary" position="0,0" size="400,240">
+	<screen name="NumberZap_summary" position="fill">
 		<eLabel position="0,0" size="100,50" backgroundColor="MenuBarColor" />
 		<widget source="parent.number_summary" render="Label" position="0,0" size="100,50" font="Ubuntu-Condensed;44" halign="center" valign="center" transparent="1" zPosition="1" />
 		<widget source="parent.service_summary" render="Label" position="center,50" size="390,140" font="Ubuntu-Bold;40" halign="center" valign="center" />
 	</screen>
 
-	<screen name="NumberZapExt_summary" position="0,0" size="400,240">
-		<widget source="parent.channel" render="Label" position="0,0" size="400,240" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1" />
+	<screen name="NumberZapExt_summary" position="fill">
+		<widget source="parent.channel" render="Label" position="fill" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1" />
 	</screen>
 
 	<screen name="NumberZapPicon_summary" position="5,4" size="400,240">
@@ -166,16 +183,284 @@
 		<widget source="parent.service_summary" render="Label" position="center,50" size="390,190" font="Ubuntu-Bold;40" halign="center" valign="center" />
 	</screen>
 
-	<screen name="SetupSummary" position="0,0" size="400,240">
+	<screen name="SetupSummary" position="fill">
 		<widget source="SetupEntry" render="Label" position="center,5" size="390,170" font="Ubuntu-Condensed;30" halign="center" valign="center" />
 
 		<widget source="SetupValue" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="0" backgroundColor="#1565c0" zPosition="1" />
 	</screen>
 
+	<screen name="ChoiceBox_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.summary_list" render="Label" position="center,55" size="390,180" font="Ubuntu-Condensed;30" noWrap="1" valign="top" />
+	</screen>
+
+	<screen name="Infopanel_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="AboutSummary" position="fill">
+		<widget source="AboutText" render="Label" position="center,center" size="390,220" font="Ubuntu-Condensed;14" />
+	</screen>
+
+	<screen name="MediaPlayerLCDScreen" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
+		<widget name="text1" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" />
+
+		<widget name="text3" position="center,55" size="390,55" font="Ubuntu-Condensed;26" halign="left" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" />
+		<widget name="text4" position="center,112" size="390,55" font="Ubuntu-Condensed;26" halign="left" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" />
+
+		<panel name="MovieProgressInfoPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="GraphicalEPGPIG_summary" position="fill">
+		<panel name="GenericEPGPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="GraphicalEPG_summary" position="fill">
+		<panel name="GenericEPGPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="GraphicalInfoBarEPG_summary" position="fill">
+		<panel name="GenericEPGPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="EPGSelectionMulti_summary" position="fill">
+		<panel name="GenericEPGPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="EPGSelection_summary" position="fill">
+		<panel name="GenericEPGPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="PluginBrowserSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="entry" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="DevicesPanelSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" zPosition="1" />
+		<widget source="entry" render="Label" position="center,68" size="380,80" font="Ubuntu-Condensed;35" halign="center" valign="center" transparent="0" backgroundColor="ButtonColor" />
+		<widget source="desc" render="Label" position="center,152" size="380,83" font="Ubuntu-Condensed;26" halign="center" valign="center" transparent="1" backgroundColor="#000000" />
+	</screen>
+
+	<screen name="IMDbLCDScreen" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="ChannelSelectionBarColor" />
+		<widget source="headline" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.title" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="TimerEditListSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="ChannelSelectionBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="name" render="Label" position="center,50" size="390,80" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" noWrap="1" />
+		<widget source="time" font="Ubuntu-Condensed;28" position="200,160" render="Label" size="195,31" halign="right" valign="center" foregroundColor="TextColor" transparent="1" />
+		<widget source="duration" font="Ubuntu-Condensed;28" position="5,160" render="Label" size="145,31" halign="left" valign="center" foregroundColor="TextColor" transparent="1" />
+		<widget source="state" font="Ubuntu-Condensed;28" position="5,200" render="Label" size="145,31" halign="left" valign="center" foregroundColor="AdditionalColor" transparent="1" />
+		<widget source="service" font="Ubuntu-Condensed;28" position="200,200" render="Label" size="195,31" halign="right" valign="center" foregroundColor="AdditionalColor" transparent="1" />
+	</screen>
+
+	<screen name="PowerTimerEditListSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="name" render="Label" position="center,50" size="390,80" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" noWrap="1" />
+		<widget source="time" font="Ubuntu-Condensed;28" position="200,160" render="Label" size="195,31" halign="right" valign="center" foregroundColor="TextColor" transparent="1" />
+		<widget source="duration" font="Ubuntu-Condensed;28" position="5,160" render="Label" size="145,31" halign="left" valign="center" foregroundColor="TextColor" transparent="1" />
+		<widget source="state" font="Ubuntu-Condensed;28" position="5,200" render="Label" size="145,31" halign="left" valign="center" foregroundColor="AdditionalColor" transparent="1" />
+		<widget source="after" font="Ubuntu-Condensed;28" position="200,200" render="Label" size="195,31" halign="right" valign="center" foregroundColor="AdditionalColor" transparent="1" />
+	</screen>
+
+	<screen name="TimerLog_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;24" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="AutoTimerOverviewSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="entry" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="NetworkServicesSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="status_summary" render="Label" position="center,70" size="390,55" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+		<widget source="autostartstatus_summary" render="Label" position="center,160" size="390,60" font="Ubuntu-Condensed;30" halign="center" valign="center" foregroundColor="AdditionalColor" transparent="1" />
+	</screen>
+
+	<screen name="ServiceScanSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget name="Service" position="0,55" size="400,135" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+		<eLabel position="center,198" size="390,3" backgroundColor="ProgressBackgroundColor" />
+		<widget name="scan_progress" render="Progress" position="center,197" size="390,5" foregroundColor="#ffffff" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="QuickMenu_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="MainSettingsView_summary" position="fill">
+		<widget source="parent.titleText" render="Label" position="center,25" size="390,150" font="Ubuntu-Bold;46" halign="center" valign="center" transparent="1">
+		</widget>
+		<panel name="RecordingPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="WizardSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="text" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.list" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1">
+			<convert type="StringListSelection" />
+		</widget>
+	</screen>
+
+	<screen name="VideoWizardSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="text" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.list" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1">
+			<convert type="StringListSelection" />
+		</widget>
+	</screen>
+
+	<screen name="JobView_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.summary_job_name" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget name="parent.summary_job_progress" position="0,55" size="400,135" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1">
+			<convert type="ProgressToText">InPercent</convert>
+		</widget>
+		<eLabel position="center,198" size="390,3" backgroundColor="ProgressBackgroundColor" />
+		<widget name="parent.summary_job_progress" render="Progress" position="center,197" size="390,5" foregroundColor="#ffffff" transparent="1" zPosition="1" />
+	</screen>
+
+	<screen name="EventView_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="EventViewSimple_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="UpdatePlugin_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.package" render="Label" position="center,70" size="390,66" font="Ubuntu-Condensed;30" halign="center" valign="center" transparent="1" />
+		<widget source="parent.status" render="Label" position="center,160" size="390,60" font="Ubuntu-Condensed;26" halign="center" valign="center" foregroundColor="AdditionalColor" transparent="1" />
+	</screen>
+
+	<screen name="SoftwareUpdateChanges_summary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.title_summary" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.text_summary" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="LanguageWizardSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.summarytext" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.summarylangname" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;42" halign="center" valign="center" transparent="1" />
+	</screen>
+
+	<screen name="BackupSelection_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="RestoreScreen_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="installedPlugins_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="RestartNetwork_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="RestorePlugins_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="RestoreMenu_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="DVDSummary" position="fill">
+		<ePixmap pixmap="backdrop_movie.png" position="0,35" size="400,190" zPosition="-1" alphatest="blend" />
+		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" zPosition="1" transparent="1" foregroundColor="TextColor" />
+
+		<widget source="session.CurrentService" render="Label" position="center,55" size="360,45" font="Ubuntu-Bold;30" halign="center" valign="center" transparent="1" foregroundColor="TextColor" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+
+		<widget name="Chapter" position="center,100" size="360,35" font="Ubuntu-Condensed;32" halign="left" />
+
+		<eLabel position="center,198" size="390,3" backgroundColor="ProgressBackgroundColor" />
+		<widget source="session.CurrentService" render="Progress" position="center,197" size="390,5" foregroundColor="#ffffff" transparent="1" zPosition="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+	</screen>
+
+	<screen name="LocationBox_summary" position="fill">
+		<widget source="parent.text" render="Label" position="center,25" size="390,150" font="Ubuntu-Bold;46" halign="center" valign="center" transparent="1" />
+		<panel name="RecordingPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="Console_summary" position="fill">
+		<panel name="GenericSummaryDescriptionPanel" />
+	</screen>
+
+	<screen name="SHOUTcastLCDScreen" position="fill">
+		<widget name="text1" render="Label" position="center,25" size="390,33" font="Ubuntu-Condensed;30" halign="center" valign="center" transparent="1" noWrap="1" />
+		<widget name="text2" render="Label" position="center,70" size="390,44" font="Ubuntu-Condensed;40" halign="center" valign="center" transparent="1" noWrap="1" />
+		<panel name="RecordingPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="VMCBaseSummary" position="fill">
+		<widget source="parent.Title" render="Label" position="center,25" size="390,150" font="Ubuntu-Bold;46" halign="center" valign="center" transparent="1">
+		</widget>
+		<panel name="RecordingPanel" />
+		<panel name="SummaryClockPanel" />
+	</screen>
+
+	<screen name="VMCPlayerSummary" position="fill">
+		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
+		<widget source="session.CurrentService" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel position="center,172" size="390,3" backgroundColor="ProgressBackgroundColor" />
+		<widget source="session.CurrentService" render="Progress" position="center,171" size="390,5" foregroundColor="ProgressForegroundColor" transparent="1" zPosition="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="10,140" size="380,30" font="Ubuntu-Condensed;28" halign="center" valign="center" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<panel name="SummaryClockPanel" />
+	</screen>
+
 <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> PANELS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
 	
 	<screen name="WallpaperPanel">
-		<ePixmap pixmap="bg.png" position="0,0" size="400,240" zPosition="-1" />
+		<ePixmap pixmap="bg.png" position="fill" zPosition="-1" />
 	</screen>
 
 	<screen name="StandbyRecordingPanel">
@@ -312,7 +597,7 @@ except Exception:
 	</screen>
 
 	<screen name="VideoInfoPanel">
-		<widget source="session.CurrentService" render="Label" position="275,208" size="120,20" font="Ubuntu-Condensed;18" foregroundColor="AdditionalColor" halign="right" transparent="1">
+		<widget source="session.CurrentService" render="Label" position="275,208" size="120,20" font="Ubuntu-Condensed;18" foregroundColor="AdditionalColor" halign="right" transparent="1" backgroundColor="#000000">
 			<convert type="ServiceInfo">VideoInfo</convert>
 		</widget>
 	</screen>
@@ -647,5 +932,55 @@ except Exception:
 		<widget source="session.CurrentService" render="Label" position="center,20" size="360,132" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
+	</screen>
+
+	<screen name="MoviePlayerInfoPanel">
+		<widget source="session.CurrentService" render="Label" position="center,20" size="360,132" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+	</screen>
+
+	<screen name="MovieProgressInfoPanel">
+		<eLabel position="center,172" size="390,3" backgroundColor="ProgressBackgroundColor" />
+		<widget source="session.CurrentService" render="Progress" position="center,171" size="390,5" foregroundColor="ProgressForegroundColor" transparent="1" zPosition="1">
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="PositionGauge" position="center,169" size="390,9" transparent="1" zPosition="1">
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="5,176" size="100,31" font="Ubuntu-Condensed;28" halign="left" transparent="1">
+			<convert type="MetrixHDServiceTime">StartTime</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="295,176" size="100,31" font="Ubuntu-Condensed;28" halign="right" transparent="1">
+			<convert type="MetrixHDServiceTime">EndTime</convert>
+		</widget>
+	</screen>
+
+	<screen name="GenericEPGPanel">
+		<eLabel position="0,0" size="400,50" backgroundColor="ChannelSelectionBarColor" />
+		<widget source="parent.Service" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<eLabel position="center,172" size="390,3" backgroundColor="ProgressBackgroundColor" />
+		<widget source="parent.Event" render="Progress" position="center,171" size="390,5" foregroundColor="ProgressForegroundColor" transparent="1" zPosition="1">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="parent.Event" render="Label" position="5,176" size="100,31" font="Ubuntu-Condensed;28" halign="left" transparent="1">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="parent.Event" render="Label" position="295,176" size="100,31" font="Ubuntu-Condensed;28" halign="right" transparent="1">
+			<convert type="EventTime">EndTime</convert>
+			<convert type="ClockToText"></convert>
+		</widget>
+		<widget source="parent.Event" render="Label" position="center,55" size="380,114" font="Ubuntu-Bold;32" halign="center" valign="center" transparent="1">
+			<convert type="EventName">Name</convert>
+		</widget>
+	</screen>
+
+	<screen name="GenericSummaryDescriptionPanel">
+		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
+		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
 	</screen>
 </skin>
