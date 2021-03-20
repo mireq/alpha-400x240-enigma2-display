@@ -762,7 +762,6 @@ def on_changed(self, label, original_size):
 	else:
 		label.show()
 		picon.resize(eSize(0, 0))
-	#picon.instance.hide()
 
 
 def find_picon(renderer):
@@ -774,6 +773,8 @@ try:
 	index, picon = find_picon(self.renderer)
 	label = self.renderer[index + 1]
 	patch(picon, 'changed', on_changed, {'label': label, 'original_size': picon.instance.size()})
+	if picon.source.text:
+		picon.changed((1,))
 	on_changed(picon, label, picon.instance.size())
 	picon.hide()
 except Exception:
