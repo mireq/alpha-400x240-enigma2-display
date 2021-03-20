@@ -29,7 +29,7 @@
 		<color name="SignalProgressForegroundColor" value="#448aff" />
 		<color name="MenuBarColor" value="#273471" />
 		<color name="ChannelSelectionBarColor" value="#1b5e20" />
-		<color name="MovieBarColor" value="#1b5e20" />
+		<color name="MovieBarColor" value="#a74b00" />
 		<color name="ButtonColor" value="#1565c0" />
 	</colors>
 
@@ -67,6 +67,7 @@
 		<panel name="EMCProgressInfoPanel" />
 		<panel name="SummaryClockPanel" />
 		<panel name="RecordingPanel" />
+		<panel name="VideoInfoPanel" />
 	</screen>
 
 	<screen name="EMCSelectionSummary" position="fill">
@@ -347,15 +348,15 @@
 	</screen>
 
 	<screen name="EventView_summary" position="fill">
-		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<eLabel position="0,0" size="400,50" backgroundColor="ChannelSelectionBarColor" />
 		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
-		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+		<widget source="parent.summary_description" render="RunningText" position="center,50" size="390,190" font="Ubuntu-Condensed;28" halign="left" valign="top" transparent="1" options="movetype=running,direction=top,repeat=0,steptime=40,startdelay=3000,startpoint=0,wrap" />
 	</screen>
 
 	<screen name="EventViewSimple_summary" position="fill">
-		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
+		<eLabel position="0,0" size="400,50" backgroundColor="ChannelSelectionBarColor" />
 		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
-		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" />
+		<widget source="parent.summary_description" render="RunningText" position="center,50" size="390,190" font="Ubuntu-Condensed;28" halign="left" valign="top" transparent="1" options="movetype=running,direction=top,repeat=0,steptime=40,startdelay=3000,startpoint=0,wrap" />
 	</screen>
 
 	<screen name="UpdatePlugin_summary" position="fill">
