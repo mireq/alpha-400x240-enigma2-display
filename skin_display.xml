@@ -74,7 +74,7 @@
 		<ePixmap pixmap="backdrop_movie.png" position="0,35" size="400,190" zPosition="-1" alphatest="blend" />
 		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
 		<widget source="parent.spacefree" render="Label" position="230,0" size="160,50" font="Ubuntu-Condensed;20" halign="right" valign="center" zPosition="1" transparent="1" backgroundColor="MovieBarColor" foregroundColor="TextColor" />
-		<widget source="session.FrontendInfo" render="FixedLabel" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" text="EMC" foregroundColor="TextColor" backgroundColor="#000000" />
+		<widget source="session.FrontendInfo" render="FixedLabel" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" text="EMC" foregroundColor="TextColor" backgroundColor="#000000" noWrap="1" />
 		<widget source="parent.Service" render="Label" position="center,50" size="390,140" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1">
 			<convert type="ServiceName">Name</convert>
 		</widget>
@@ -95,7 +95,7 @@
 	<screen name="MovieSelectionSummary" position="fill">
 		<ePixmap pixmap="backdrop_movie.png" position="0,35" size="400,190" zPosition="-1" alphatest="blend" />
 		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" zPosition="1" transparent="1" foregroundColor="TextColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" zPosition="1" transparent="1" foregroundColor="TextColor" noWrap="1" />
 		<widget source="name" render="Label" position="center,55" size="360,180" font="Ubuntu-Bold;40" halign="center" valign="center" transparent="1" foregroundColor="TextColor" />
 	</screen>
 
@@ -109,7 +109,7 @@
 
 	<screen name="MenuSummary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="parent.menu" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1">
 			<convert type="StringListSelection" />
 		</widget>
@@ -153,16 +153,22 @@
 
 	<screen name="MessageBoxSimple_summary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="parent.Text" render="Label" position="center,55" size="390,120" font="Ubuntu-Condensed;30" halign="center" valign="center" />
-		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="0" backgroundColor="ButtonColor" zPosition="1" />
+		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="0" backgroundColor="ButtonColor">
+			<convert type="ConditionalShowHide"></convert>
+		</widget>
+		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="1" backgroundColor="ButtonColor" />
 	</screen>
 
 	<screen name="MessageBox_summary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="parent.Text" render="Label" position="center,55" size="390,120" font="Ubuntu-Condensed;26" halign="center" valign="center" />
-		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="1" />
+		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="0" backgroundColor="ButtonColor">
+			<convert type="ConditionalShowHide"></convert>
+		</widget>
+		<widget source="parent.selectedChoice" render="Label" position="center,180" size="390,55" font="Ubuntu-Bold;36" halign="center" valign="center" transparent="1" backgroundColor="ButtonColor" />
 	</screen>
 
 	<screen name="NumberZap_summary" position="fill">
@@ -192,13 +198,13 @@
 
 	<screen name="ChoiceBox_summary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="parent.summary_list" render="Label" position="center,55" size="390,180" font="Ubuntu-Condensed;30" noWrap="1" valign="top" />
 	</screen>
 
 	<screen name="Infopanel_summary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;30" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="parent.summary_description" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1" />
 	</screen>
 
@@ -208,7 +214,7 @@
 
 	<screen name="MediaPlayerLCDScreen" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
-		<widget name="text1" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" />
+		<widget name="text1" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" noWrap="1" />
 
 		<widget name="text3" position="center,55" size="390,55" font="Ubuntu-Condensed;26" halign="left" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" />
 		<widget name="text4" position="center,112" size="390,55" font="Ubuntu-Condensed;26" halign="left" valign="center" transparent="1" foregroundColor="TextColor" zPosition="1" />
@@ -244,13 +250,13 @@
 
 	<screen name="PluginBrowserSummary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" zPosition="1" transparent="1" noWrap="1" />
 		<widget source="entry" render="Label" position="center,50" size="390,190" font="Ubuntu-Condensed;50" halign="center" valign="center" transparent="1" />
 	</screen>
 
 	<screen name="DevicesPanelSummary" position="fill">
 		<eLabel position="0,0" size="400,50" backgroundColor="MenuBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" zPosition="1" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;36" halign="center" valign="center" transparent="1" zPosition="1" noWrap="1" />
 		<widget source="entry" render="Label" position="center,68" size="380,80" font="Ubuntu-Condensed;35" halign="center" valign="center" transparent="0" backgroundColor="ButtonColor" />
 		<widget source="desc" render="Label" position="center,152" size="380,83" font="Ubuntu-Condensed;26" halign="center" valign="center" transparent="1" backgroundColor="#000000" />
 	</screen>
@@ -405,7 +411,7 @@
 	<screen name="DVDSummary" position="fill">
 		<ePixmap pixmap="backdrop_movie.png" position="0,35" size="400,190" zPosition="-1" alphatest="blend" />
 		<eLabel position="0,0" size="400,50" backgroundColor="MovieBarColor" />
-		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" zPosition="1" transparent="1" foregroundColor="TextColor" />
+		<widget source="parent.Title" render="Label" position="center,0" size="390,50" font="Ubuntu-Condensed;32" halign="center" valign="center" zPosition="1" transparent="1" foregroundColor="TextColor" noWrap="1" />
 
 		<widget source="session.CurrentService" render="Label" position="center,55" size="360,45" font="Ubuntu-Bold;30" halign="center" valign="center" transparent="1" foregroundColor="TextColor" noWrap="1">
 			<convert type="ServiceName">Name</convert>
