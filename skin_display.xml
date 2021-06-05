@@ -146,7 +146,7 @@
 	<screen name="HbbTVWindow_summary" position="fill">
 		<panel name="PiconMainPanel" />
 		<panel name="RecordingPanel" />
-		<ePixmap pixmap="hbbtv_active.png" position="5,5" size="122,42" zPosition="-1" alphatest="blend"  />
+		<ePixmap pixmap="hbbtv_active.png" position="5,5" size="122,42" zPosition="1" alphatest="blend" />
 		<widget source="parent.Title" render="Label" position="center,140" size="390,100" font="Ubuntu-Condensed;40" halign="center" valign="center" transparent="1">
 		</widget>
 	</screen>
