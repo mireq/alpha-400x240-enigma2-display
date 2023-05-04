@@ -36,7 +36,7 @@
 	<fonts>
 		<font filename="Ubuntu-C.ttf" name="Ubuntu-Condensed" scale="100"/>
 		<font filename="Ubuntu-B.ttf" name="Ubuntu-Bold" scale="100"/>
-		<font filename="/usr/share/enigma2/MetrixHD/fonts/meteocons.ttf" name="Meteo" scale="100" />
+		<font filename="meteocons.ttf" name="Meteo" scale="100" />
 	</fonts>
 
 <!-- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> SCREENS <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
@@ -702,7 +702,6 @@ except Exception:
 		<widget source="session.CurrentService" render="Label" position="20,188" size="80,44" font="Ubuntu-Condensed;40" foregroundColor="WeatherColor" halign="right" valign="center" backgroundColor="WeatherBarColor" zPosition="1">
 			<convert type="MetrixHDWeather">currentWeatherTempgetCF</convert>
 		</widget>
-
 		<widget source="session.CurrentService" render="Label" position="128,187" size="50,22" font="Ubuntu-Condensed;20" foregroundColor="WeatherColor" halign="right" zPosition="1" backgroundColor="WeatherBarColor">
 			<convert type="MetrixHDWeather">forecastTodayTempMax</convert>
 		</widget>
