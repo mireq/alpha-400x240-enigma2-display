@@ -699,6 +699,12 @@ except Exception:
 	<screen name="WeatherPanel">
 		<eLabel position="0,180" size="400,1" backgroundColor="WeatherBarBorderColor" />
 		<eLabel position="0,181" size="400,59" backgroundColor="WeatherBarColor" />
+		<widget source="session.CurrentService" render="Label" position="65,188" size="40,44" font="Ubuntu-Condensed;40" foregroundColor="WeatherColor" halign="left" valign="center" backgroundColor="WeatherBarColor" zPosition="1">
+			<convert type="MetrixHDWeather">CF</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="20,188" size="40,44" font="Ubuntu-Condensed;40" foregroundColor="WeatherColor" halign="right" valign="center" backgroundColor="WeatherBarColor" zPosition="1">
+			<convert type="MetrixHDWeather">currentWeatherTemp</convert>
+		</widget>
 		<widget source="session.CurrentService" render="Label" position="20,188" size="80,44" font="Ubuntu-Condensed;40" foregroundColor="WeatherColor" halign="right" valign="center" backgroundColor="WeatherBarColor" zPosition="1">
 			<convert type="MetrixHDWeather">currentWeatherTempgetCF</convert>
 		</widget>
